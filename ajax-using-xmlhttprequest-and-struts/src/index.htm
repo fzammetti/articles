@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>XMLHttpRequest with Struts Example Webapp</title>
+</head>
+<body>
+
+<h1>XMLHttpRequest with Struts Example Webapp</h1>Home Page<hr><br>
+Welcome!  This webapp, which is attached to the article "Ajax using
+XMLHttpRequest and Struts" by Frank W. Zammetti, demonstrates a number of
+different usages of the XMLHttpRequest object in the Ajax model.
+<br><br>
+All of these examples have been tested in IE 6.0 and Firefox 1.0.  They SHOULD
+work in any version subsequent to those, as well as Mozilla 1.0 and higher,
+Netscape 7 and higher, Safari 1.2 and higher and Opera 7.60 and higher.
+<br><br>
+Click the link of the example you would like to see:
+<br><br>
+
+<a href="example1.do">Example 1. Simple URL retrieval and display.</a><br>
+This example allows the user to enter a URL, which is then retrieved and
+displayed in a &lt;span&gt;.  This demonstrates that what is retrieved is NOT
+treated as an HTML document but rather a simple stream of data, hence the
+document is not parsed and page events don't fire, images don't get retrieved,
+etc.  This example does NOT really use Struts, everything needed is in
+example1.htm.
+<br><br>
+
+<a href="example2.do">Example 2. Dynamic table.</a><br>
+This example shows how a table can be built and displayed on-the-fly by showing
+sorting of a table based on clicks on the table headers.
+<br><br>
+
+<a href="example3.do">Example 3. Dynamic &lt;select&gt; elements.</a><br>
+This example shows how the contents of a &lt;select&gt; can be changed
+on-the-fly in response to the change in another.
+<br><br>
+
+<a href="example4.do">Example 4. Dynamic &lt;textarea&gt;</a><br>
+This example shows how a &lt;textarea&gt; can be loaded on-the-fly with
+content.  Here is is one of three poems loaded based on a change in a group
+of radio buttons.    Also note that unlike example 2 and 3 which renders the
+response directly in the Action, this one actually forwards to a JSP that is
+the response, and hence no Action is involved.
+<br><br>
+
+<a href="example5.do">Example 5. Data submission.</a><br>
+This example shows how XMLHttpRequest can be used to submit data.  In this
+example, a series of user inputs are used to create a simple CSV string,
+which is then submitted to an Action, the values placed in a Value Object, and
+that object passed back to the view for display.
+<br><br>
+
+<a href="example6.do">Example 6. RSS example.</a><br>
+This example is a more real-world example.  It retrieves an RSS feed from one
+of three user-selected sources, parses the feed and displays the headlines
+in clickable form.  This demonstrates retrieving XML from a server and
+dealing with it on the client.
+<br><br>
+
+<a href="example7.do">Example 7. RSS example #2.</a><br>
+This version of the RSS feed example allows you to enter the URL of
+an actual RSS feed.  Otherwise it works the same as the other example.
+This one uses an Action to retrieve the XML, therebye getting around
+the cross-domain issues of the other example.
+<br>
+
+
+</body>
+</html>

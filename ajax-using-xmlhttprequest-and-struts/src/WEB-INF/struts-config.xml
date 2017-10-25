@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+  <action-mappings>
+    <action path="/home" type="org.apache.struts.actions.ForwardAction" parameter="/index.htm" />
+    <action path="/example1" type="org.apache.struts.actions.ForwardAction" parameter="/example1.htm" />
+    <action path="/example2" type="org.apache.struts.actions.ForwardAction" parameter="/example2.htm" />
+    <action path="/example2RenderTable" type="xhrstruts.Example2RenderTableAction" />
+    <action path="/example3" type="org.apache.struts.actions.ForwardAction" parameter="/example3.htm" />
+    <action path="/example3GetCharacters" type="xhrstruts.Example3GetCharactersAction" />
+    <action path="/example4" type="org.apache.struts.actions.ForwardAction" parameter="/example4.htm" />
+    <action path="/example4Poem1" type="org.apache.struts.actions.ForwardAction" parameter="/poem1.txt" />
+    <action path="/example4Poem2" type="org.apache.struts.actions.ForwardAction" parameter="/poem2.txt" />
+    <action path="/example4Poem3" type="org.apache.struts.actions.ForwardAction" parameter="/poem3.txt" />
+    <action path="/example5" type="org.apache.struts.actions.ForwardAction" parameter="/example5.htm" />
+    <action path="/example5Submit" type="xhrstruts.Example5Action">
+      <forward name="default" path="/example5response.jsp" />
+    </action>
+    <action path="/example6" type="org.apache.struts.actions.ForwardAction" parameter="/example6.htm" />
+    <action path="/example7" type="org.apache.struts.actions.ForwardAction" parameter="/example7.htm" />
+    <action path="/example7GetFeed" type="xhrstruts.Example7Action" />
+  </action-mappings>
+
+</struts-config>

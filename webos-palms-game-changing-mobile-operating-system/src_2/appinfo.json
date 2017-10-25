@@ -1,0 +1,9 @@
+{
+	"id": "com.etherient.notetaker",
+	"version": "1.0.0",
+	"vendor": "Etherient",
+	"type": "web",
+	"main": "index.html",
+	"title": "NoteTaker",
+	"icon": "icon.png"
+}

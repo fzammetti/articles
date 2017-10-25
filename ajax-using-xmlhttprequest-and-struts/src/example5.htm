@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Example 5</title>
+
+<script>
+
+  var req;
+  var which;
+
+  function submitData() {
+    // Construct a CSV string from the entries.  Make sure all fields are
+    // filled in first.
+    f = document.theForm.firstName.value;
+    m = document.theForm.middleName.value;
+    l = document.theForm.lastName.value;
+    a = document.theForm.age.value;
+    if (f == "" || m == "" || l == "" || a == "") {
+      alert("Please fill in all fields first");
+      return false;
+    }
+    csv = f + "," + m + "," + l + "," + a;
+    // Ok, so now we retrieve the response as in all the other examples,
+    // except that now we append the CSV onto the URL as a query string,
+    // being sure to escape it first.
+    retrieveURL("example5Submit.do?csv=" + escape(csv));
+  }
+
+  function retrieveURL(url) {
+    if (window.XMLHttpRequest) { // Non-IE browsers
+      req = new XMLHttpRequest();
+      req.onreadystatechange = processStateChange;
+      try {
+        req.open("GET", url, true);
+      } catch (e) {
+        alert(e);
+      }
+      req.send(null);
+    } else if (window.ActiveXObject) { // IE
+      req = new ActiveXObject("Microsoft.XMLHTTP");
+      if (req) {
+        req.onreadystatechange = processStateChange;
+        req.open("GET", url, true);
+        req.send();
+      }
+    }
+  }
+
+  function processStateChange() {
+    if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        document.getElementById("theResponse").innerHTML = req.responseText;
+      } else {
+        alert("Problem: " + req.statusText);
+      }
+    }
+  }
+
+</script>
+
+
+</head>
+<body>
+
+<h1>Example 5</h1>
+Data submission.<hr>
+<p align="right"><a href="home.do">Return home</a></p><br>
+This example shows how XMLHttpRequest can be used to submit data.  In this
+example, a series of user inputs are used to create a simple CSV string,
+which is then submitted to an Action, the values placed in a Value Object, and
+that object passed back to the view for display.
+<br><br>
+
+<form name="theForm">
+  First Name: <input type="text" name="firstName"><br>
+  Middle Name: <input type="text" name="middleName"><br>
+  Last Name: <input type="text" name="lastName"><br>
+  Age Name: <input type="text" name="age"><br>
+  <input type="button" value="Submit Data" onClick="submitData();">
+</form>
+
+<b>Response will appear here...</b><br>
+<span id="theResponse"></span>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<ajaxConfig>
+
+  <handler name="MyFirstCustomErrorHandler" type="error">
+    <location>local</location>
+    <function>customErrorHandler</function>
+  </handler>
+  <handler name="MyFirstCustomRequestHandler" type="request">
+    <location>js/customRequestHandlerImpl.js</location>
+    <function>customRequestHandler</function>
+  </handler>
+  <handler name="MyFirstCustomResponseHandler" type="response">
+    <location>js/customResponseHandlerImpl.js</location>
+    <function>customResponseHandler</function>
+  </handler>
+
+  <group ajaxRef="MyFunctions">
+    <element ajaxRef="Select1">
+      <errorHandler code="404" type="MyFirstCustomErrorHandler" />
+      <event type="onchange">
+        <requestHandler type="MyFirstCustomRequestHandler" target="resultX.htm">
+          <parameter />
+        </requestHandler>
+        <responseHandler type="MyFirstCustomResponseHandler">
+          <parameter>resultDiv</parameter>
+        </responseHandler>
+      </event>
+    </element>
+  </group>
+
+</ajaxConfig>

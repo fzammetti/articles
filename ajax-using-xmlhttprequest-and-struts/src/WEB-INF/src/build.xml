@@ -1,0 +1,17 @@
+<project name="Blank" basedir="../" default="build">
+
+  <path id="build.classpath">
+    <pathelement path="classes" />
+    <pathelement path="lib/struts.jar" />
+    <pathelement path="lib/commons-codec.jar" />
+    <pathelement path="src/servlet-api.jar" />
+    <pathelement path="${classpath}" />
+  </path>
+
+  <target name="build">
+    <javac srcdir="src" destdir="classes" debug="true" debuglevel="lines,vars,source">
+      <classpath refid="build.classpath" />
+    </javac>
+  </target>
+
+</project>

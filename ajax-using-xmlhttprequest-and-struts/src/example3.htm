@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Example 3</title>
+
+<script>
+
+  var req;
+  var which;
+
+  function retrieveURL(url) {
+    if (window.XMLHttpRequest) { // Non-IE browsers
+      req = new XMLHttpRequest();
+      req.onreadystatechange = processStateChange;
+      try {
+        req.open("GET", url, true);
+      } catch (e) {
+        alert(e);
+      }
+      req.send(null);
+    } else if (window.ActiveXObject) { // IE
+      req = new ActiveXObject("Microsoft.XMLHTTP");
+      if (req) {
+        req.onreadystatechange = processStateChange;
+        req.open("GET", url, true);
+        req.send();
+      }
+    }
+  }
+
+  function processStateChange() {
+    if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        document.getElementById("characters").innerHTML = req.responseText;
+      } else {
+        alert("Problem: " + req.statusText);
+      }
+    }
+  }
+
+</script>
+
+</head>
+<body onLoad="retrieveURL('example3GetCharacters.do');">
+
+<h1>Example 3</h1>
+Dynamic &lt;select&gt; elements.<hr>
+<p align="right"><a href="home.do">Return home</a></p><br>
+This example shows how the contents of a &lt;select&gt; can be changed
+on-the-fly in response to the change in another.
+<br><br>
+Select a show, then see how the list of characters changes accordingly:
+<br><br>
+
+<form name="dynamicSelect">
+  TV Show: <select name="TVShowSelect" onChange="retrieveURL('example3GetCharacters.do?tvShow=' + this.value);">
+    <option value=""></option>
+    <option value="Babylon5">Babylon 5</option>
+    <option value="StargateSG1">Stargate SG-1</option>
+    <option value="StarTrekTNG">Star Trek: The Next Generation</option>
+  </select>
+  <br>
+  Characters: <span id="characters"></span>
+</form>
+<br>
+
+</body>
+</html>

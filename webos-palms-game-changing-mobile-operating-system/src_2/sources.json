@@ -1,0 +1,12 @@
+[
+    {"source": "app/NoteTaker.js"},
+    {"source": "app/assistants/stage-assistant.js"},
+    {
+        "scenes": "NoteList",
+        "source": "app/assistants/NoteList-assistant.js"
+    },
+    {
+        "scenes": "NoteView",
+        "source": "app/assistants/NoteView-assistant.js"
+    }
+]

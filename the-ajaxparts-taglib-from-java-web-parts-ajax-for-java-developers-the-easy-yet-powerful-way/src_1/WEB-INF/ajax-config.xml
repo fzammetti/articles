@@ -1,0 +1,16 @@
+<ajaxConfig>
+
+  <group ajaxRef="MyFunctions">
+    <element ajaxRef="Button1">
+      <event type="onclick">
+        <requestHandler type="std:SimpleRequest" target="result1.htm">
+          <parameter />
+        </requestHandler>
+        <responseHandler type="std:InnerHTML">
+          <parameter>resultDiv</parameter>
+        </responseHandler>
+      </event>
+    </element>
+  </group>
+
+</ajaxConfig>

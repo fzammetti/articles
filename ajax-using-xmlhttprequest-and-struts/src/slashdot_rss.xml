@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://slashdot.org/">
+<title>Slashdot</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+<dc:language>en-us</dc:language>
+<dc:rights>Copyright 1997-2004, OSTG - Open Source Technology Group, Inc.  All Rights Reserved.</dc:rights>
+<dc:date>2005-03-31T16:31:19+00:00</dc:date>
+<dc:publisher>OSTG</dc:publisher>
+<dc:creator>pater@slashdot.org</dc:creator>
+<dc:subject>Technology</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=05/03/31/1537220&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=05/03/31/1527257&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=05/03/31/142255&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=05/03/31/132236&amp;from=rss" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=05/03/31/1258253&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=05/03/31/014239&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=05/03/31/0345209&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=05/03/31/0339257&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=05/03/30/2349259&amp;from=rss" />
+  <rdf:li rdf:resource="http://hardware.slashdot.org/article.pl?sid=05/03/30/2030207&amp;from=rss" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://images.slashdot.org/topics/topicslashdot.gif" />
+<textinput rdf:resource="http://slashdot.org/search.pl" />
+</channel>
+
+<image rdf:about="http://images.slashdot.org/topics/topicslashdot.gif">
+<title>Slashdot</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=05/03/31/1537220&amp;from=rss">
+<title>MS Launches Video Download Service</title>
+<link>http://slashdot.org/article.pl?sid=05/03/31/1537220&amp;from=rss</link>
+<description>renderhead writes "According to ZDNet and many other sources, Microsoft has launched a new video download service for playing back television content on Windows Mobile devices. Partners include CinemaNow, MSNBC.com, and TiVo. According to another article from ployer.com, the service will require Windows XP, Internet Explorer 5 or higher, and Windows Media Player 10 or higher."</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2005-03-31T16:26:00+00:00</dc:date>
+<dc:subject>microsoft</dc:subject>
+<slash:department>videos-on-the-dl</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:hitparade>2,2,2,1,0,0,0</slash:hitparade>
+<slash:comments>2</slash:comments>
+</item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=05/03/31/1527257&amp;from=rss">
+<title>95% of IT Projects Not Delivered On Time</title>
+<link>http://it.slashdot.org/article.pl?sid=05/03/31/1527257&amp;from=rss</link>
+<description>An anonymous reader wrote " The Globe and Mail reports that 'A new report conducted by market research firm Info-Tech Research Group says 95 per cent of information technology groups are not delivering some number of projects on time or to the full satisfaction of the business executive.' The article goes on to discuss the reasons for this pervasive (perceived?) problem. The article mentions Info-Tech's reasons: unrealistic time frames, staff shortages, and poorly defined project scope. However, the article's author lays the blame with vendors."</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2005-03-31T15:56:00+00:00</dc:date>
+<dc:subject>it</dc:subject>
+<slash:department>quiet-desperation</slash:department>
+<slash:section>it</slash:section>
+<slash:hitparade>125,120,99,68,23,16,14</slash:hitparade>
+<slash:comments>125</slash:comments>
+</item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=05/03/31/142255&amp;from=rss">
+<title>Microsoft Releases Windows Server 2003 SP1</title>
+<link>http://it.slashdot.org/article.pl?sid=05/03/31/142255&amp;from=rss</link>
+<description>Masq666 writes "Microsoft has wrapped up development on the first major update to its Windows Server 2003 operating system and released it for download, The company said that Windows Server 2003 Service Pack 1 is currently available for download via Microsoft's site and will soon start showing up on new servers. Among the primary benefits of the free update is the inclusion of security enhancements similar to those added to Windows XP with last year's Service Pack 2. News.com.com has more details and commentary."</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2005-03-31T15:18:00+00:00</dc:date>
+<dc:subject>windows</dc:subject>
+<slash:department>pack-your-services</slash:department>
+<slash:section>it</slash:section>
+<slash:hitparade>164,144,113,72,22,13,9</slash:hitparade>
+<slash:comments>164</slash:comments>
+</item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=05/03/31/132236&amp;from=rss">
+<title>Google Prefetching for Mozilla Browsers</title>
+<link>http://it.slashdot.org/article.pl?sid=05/03/31/132236&amp;from=rss</link>
+<description>kv9 writes "A post on GoogleBlog reveals that Google has enabled results prefetching for Mozilla based browsers, which means that the top results of queries are being loaded in the background and pages will load faster. More info on the Mozilla Prefetching FAQ and the Google Webmaster FAQ"</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2005-03-31T14:37:00+00:00</dc:date>
+<dc:subject>google</dc:subject>
+<slash:department>two-great-tastes-that-go-great-together</slash:department>
+<slash:section>it</slash:section>
+<slash:hitparade>226,210,168,96,40,21,17</slash:hitparade>
+<slash:comments>226</slash:comments>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=05/03/31/1258253&amp;from=rss">
+<title>Dr. Who Series Star Quits</title>
+<link>http://slashdot.org/article.pl?sid=05/03/31/1258253&amp;from=rss</link>
+<description>TinheadNed writes "The day after the BBC confirmed there will be a second Doctor Who series next year, as well as a Christmas special, new Dr Who actor Christopher Eccleston has revealed he will not continue in the role, for fears of being typecast. Billie Piper, who plays his assistant Rose, will probably continue in her role."</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2005-03-31T13:48:00+00:00</dc:date>
+<dc:subject>scifi</dc:subject>
+<slash:department>killllll-the-doktorrrrrr</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:hitparade>276,265,206,123,29,16,7</slash:hitparade>
+<slash:comments>276</slash:comments>
+</item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=05/03/31/014239&amp;from=rss">
+<title>Private .US Registrations Disallowed by NTIA</title>
+<link>http://yro.slashdot.org/article.pl?sid=05/03/31/014239&amp;from=rss</link>
+<description>jnetsurfer writes "Apparently, the National Telecommunications and Information Administration ("NTIA") has decided that domains under the TLD .US have no right to privacy. New domain names ending in .US will not be able to be registered as "private" and current owners of .US names will be forced to reveal their contact information starting "no later than January 26, 2006". This means that you can't run an annonymous website with a .US TLD. If you don't like this, feel free to sign the petition."</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2005-03-31T13:00:00+00:00</dc:date>
+<dc:subject>privacy</dc:subject>
+<slash:department>no-.us-for-you</slash:department>
+<slash:section>yro</slash:section>
+<slash:hitparade>200,193,145,100,31,20,18</slash:hitparade>
+<slash:comments>200</slash:comments>
+</item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=05/03/31/0345209&amp;from=rss">
+<title>Nano-Probes Stay Inside a Cell's Nucleus for Days</title>
+<link>http://science.slashdot.org/article.pl?sid=05/03/31/0345209&amp;from=rss</link>
+<description>Roland Piquepaille writes "Researchers from the Lawrence Berkeley National Laboratory (LBL) have developed fluorescent and stable nano-probes which can stay inside a cell's nucleus for hours or even days. According to this LBL news release, this will help biologists to better understand nuclear processes that evolve slowly, such as DNA replication, genomic alterations, and cell cycle control. This research was partially based on previous investigations about quantum dots. Now, the researchers want to tailor their quantum dots, which emit different colors depending on their sizes, to check specific chemical reactions inside nuclei, such as how proteins help repair DNA after irradiation. Read more for other details and references and to see how a nano-sized probe is entering a cell's nucleus."</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2005-03-31T11:01:00+00:00</dc:date>
+<dc:subject>biotech</dc:subject>
+<slash:department>from-the-inside-out</slash:department>
+<slash:section>science</slash:section>
+<slash:hitparade>96,72,53,34,24,11,3</slash:hitparade>
+<slash:comments>96</slash:comments>
+</item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=05/03/31/0339257&amp;from=rss">
+<title>UCSB Student Engineers Grade Hack</title>
+<link>http://it.slashdot.org/article.pl?sid=05/03/31/0339257&amp;from=rss</link>
+<description>An anonymous reader writes "The UCSB Daily Nexus reports "A UCSB student is being charged with four felonies after she allegedly stole the identity of two professors and used the information to change her own and several other students' grades, police said." The article goes on to note that, though working a few tricks to get into the system, she was fairly unsophisticated, and in fact failed to conceal her IP address from authorities. With other computing snafus recently making headlines, are universities too careless with their data?"</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2005-03-31T06:00:00+00:00</dc:date>
+<dc:subject>ed</dc:subject>
+<slash:department>eyes-on-your-own-paper</slash:department>
+<slash:section>it</slash:section>
+<slash:hitparade>435,429,300,221,74,44,31</slash:hitparade>
+<slash:comments>435</slash:comments>
+</item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=05/03/30/2349259&amp;from=rss">
+<title>Interview With Mark Cuban About Grokster</title>
+<link>http://yro.slashdot.org/article.pl?sid=05/03/30/2349259&amp;from=rss</link>
+<description>David Goldenberg writes "Gelf Magazine is featuring an interview with Mark Cuban about the grokster case. In the interview, Cuban tells Gelf he decided to get involved because of the "copyright law and the politicians who get paid to pimp for the studios and labels." Our previous coverage here.</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2005-03-31T04:15:00+00:00</dc:date>
+<dc:subject>doj</dc:subject>
+<slash:department>what-else-did-he-say</slash:department>
+<slash:section>yro</slash:section>
+<slash:hitparade>178,165,132,106,39,27,17</slash:hitparade>
+<slash:comments>178</slash:comments>
+</item>
+
+<item rdf:about="http://hardware.slashdot.org/article.pl?sid=05/03/30/2030207&amp;from=rss">
+<title>Robotic Nanotech Swarms on Mars... in 2034</title>
+<link>http://hardware.slashdot.org/article.pl?sid=05/03/30/2030207&amp;from=rss</link>
+<description>Roland Piquepaille writes "NASA is testing a shape-shifting robot called 'TETwalker' for tetrahedral walker, because it looks like a flexible pyramid. It has been tested in the lab and at the McMurdo station in Antarctica to test it under conditions more like those on Mars. Now, it is on the way to be -- really -- miniaturized by using micro- and nano-electro-mechanical systems. These robots will eventually join together to form 'autonomous nanotechnology swarms' (ANTS). When it's done, in about thirty years, these nanotech swarms will 'alter their shape to flow over rocky terrain or to create useful structures like communications antennae and solar sails.' So in 2034, nanotechnology will land on Mars. Read more for other details and references about the TETwalker and the ANTS project."</description>
+<dc:creator>timothy</dc:creator>
+<dc:date>2005-03-31T03:06:00+00:00</dc:date>
+<dc:subject>robotics</dc:subject>
+<slash:department>that's-when-they'll-fake-it-at-least</slash:department>
+<slash:section>hardware</slash:section>
+<slash:hitparade>267,257,188,120,43,26,14</slash:hitparade>
+<slash:comments>267</slash:comments>
+</item>
+
+<textinput rdf:about="http://slashdot.org/search.pl">
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>

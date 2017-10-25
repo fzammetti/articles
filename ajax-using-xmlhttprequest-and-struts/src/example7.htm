@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Example 7</title>
+</head>
+
+<script>
+
+  var req;
+  var which;
+
+  function retrieveURL(url) {
+    if (url != "") {
+      url = "example7GetFeed.do?feedURL=" + escape(url);
+      if (window.XMLHttpRequest) { // Non-IE browsers
+        req = new XMLHttpRequest();
+        req.onreadystatechange = processStateChange;
+        try {
+          req.open("GET", url, true);
+        } catch (e) {
+          alert(e);
+        }
+        req.send(null);
+      } else if (window.ActiveXObject) { // IE
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+        if (req) {
+          req.onreadystatechange = processStateChange;
+          req.open("GET", url, true);
+          req.send();
+        }
+      }
+    }
+  }
+
+  function processStateChange() {
+    if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        // We're going to get a list of all tags in the returned XML with the
+        // names title, link and description.  Everything else is ignored.
+        // For each that we find, we'll constuct a simple bit of HTML for
+        // it and build up the HTML to display.  When we hit a title,
+        // link or description element that isn't there, we're done.
+        xml = req.responseXML;
+        i = 0;
+        html = "";
+        while (i >= 0) {
+          t = xml.getElementsByTagName("title")[i];
+          l = xml.getElementsByTagName("link")[i];
+          d = xml.getElementsByTagName("description")[i];
+          if (t != null && l != null && d != null) {
+            t = t.firstChild.data;
+            l = l.firstChild.data;
+            d = d.firstChild.data;
+            html += "<a href=\"" + l + "\">" + t + "</a><br>" + d + "<br><br>";
+            i++;
+          } else {
+            i = -1;
+          }
+        }
+        document.getElementById("rssData").innerHTML = html;
+      } else {
+        alert("Problem: " + req.statusText);
+      }
+    }
+  }
+
+</script>
+
+<body>
+
+<h1>Example 7</h1>
+RSS example #2.<hr>
+<p align="right"><a href="home.do">Return home</a></p><br>
+This version of the RSS feed example allows you to enter the URL of
+an actual RSS feed.  Otherwise it works the same as the other example.
+This one uses an Action to retrieve the XML, therebye getting around
+the cross-domain issues of the other example.
+<br><br>
+<form name="rssForm">
+  <input type="text" name="feedURL" size="50" value="http://www.pocketpcthoughts.com/xml/">
+  <br>
+  <input type="button" value="Click To Get Feed" onClick="retrieveURL(rssForm.feedURL.value);">
+</form>
+<hr><br>
+<span id="rssData"></span>
+<br>
+
+</body>
+</html>

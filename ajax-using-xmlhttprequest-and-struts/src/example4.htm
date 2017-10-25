@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Example 4</title>
+</head>
+
+<script>
+
+  var req;
+  var which;
+
+  function retrieveURL(url) {
+    if (window.XMLHttpRequest) { // Non-IE browsers
+      req = new XMLHttpRequest();
+      req.onreadystatechange = processStateChange;
+      try {
+        req.open("GET", url, true);
+      } catch (e) {
+        alert(e);
+      }
+      req.send(null);
+    } else if (window.ActiveXObject) { // IE
+      req = new ActiveXObject("Microsoft.XMLHTTP");
+      if (req) {
+        req.onreadystatechange = processStateChange;
+        req.open("GET", url, true);
+        req.send();
+      }
+    }
+  }
+
+  function processStateChange() {
+    if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        document.theForm.theTextarea.value = req.responseText;
+      } else {
+        alert("Problem: " + req.statusText);
+      }
+    }
+  }
+
+</script>
+
+<body>
+
+<h1>Example 4</h1>
+Dynamic &lt;textarea&gt;<hr>
+<p align="right"><a href="home.do">Return home</a></p><br>
+This example shows how a &lt;textarea&gt; can be loaded on-the-fly with
+content.  Here is is one of three poems loaded based on a change in a group
+of radio buttons.    Also note that unlike example 2 and 3 which renders the
+response directly in the Action, this one actually forwards to a JSP that is
+the response, and hence no Action is involved.
+<br><br>
+
+<form name="theForm">
+  <input type="radio" name="poem" onClick="retrieveURL('example4Poem1.do');">Langston Hughes - Dreams<br>
+  <input type="radio" name="poem" onClick="retrieveURL('example4Poem2.do');">Walt Whitman - When I Heard The Learned Astronomer<br>
+  <input type="radio" name="poem" onClick="retrieveURL('example4Poem3.do');">Robert Frost - The Road Not Taken<br>
+  <textarea name="theTextarea" cols="80" rows="20">Click one!</textarea>
+</form>
+<br>
+
+</body>
+</html>

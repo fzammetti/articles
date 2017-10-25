@@ -1,0 +1,63 @@
+<body>
+
+  <head>
+
+    <script src="jsonp.js"></script>
+    <script>
+
+      function test1() {
+        var config = {
+          url : "http://search.yahooapis.com/ImageSearchService/V1/imageSearch?",
+          appid : "YahooDemo", query : "Amanda Tapping", output : "json",
+          callback : test1Callback, onTimeout : timeoutHandler
+        };
+        JSONP.request(config);
+      }
+
+      function badTest() {
+        var config = {
+          url : "gibberish", appid : "gibberish", query : "gibberish",
+          output : "json", callback : null, onTimeout : timeoutHandler
+        };
+        JSONP.request(config);
+      }
+
+      function timeoutHandler(inRequestObject) {
+        // Iterate its attributes
+        var s = "";
+        for (var i in inRequestObject) {
+          s += i + " = " + inRequestObject[i] + "\n";
+        }
+        for (var i in inRequestObject.inConfig) {
+          s += i + " = " + inRequestObject.inConfig[i] + "\n";
+        }
+        // Show the output.
+        alert("REQUEST TIMED OUT - Request Object Dump: \n\n" + s);
+      }
+
+      function test1Callback(inResponse) {
+        var outputString = "Total results returned: " +
+          inResponse.ResultSet.totalResultsReturned + "<br>";
+        for (var i = 0; i < inResponse.ResultSet.Result.length; i++) {
+          outputString += inResponse.ResultSet.Result[i].Title + "<br>";
+        }
+        document.getElementById("divResponse").innerHTML = outputString;
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <input type="button" value="Make Request" onClick="test1();">
+    <br><br>
+    <div id="divResponse"
+      style="width:400px;height:250px;border:1px solid #000000;overflow:auto;">
+      Search results will appear here</div>
+    <br><br>
+    <input type="button" value="Make Bad Request" onClick="badTest();">
+
+  </body>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+
+  <display-name>DataVision Webapp Sample</display-name>
+
+  <servlet>
+    <servlet-name>DVWebappServlet</servlet-name>
+    <servlet-class>dvwebapp.DVWebappServlet</servlet-class>
+    <!-- Be sure the following init parameters match what's in the report! -->
+    <init-param>
+      <param-name>JDBCDriverClassName</param-name>
+      <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ConnectionInfo</param-name>
+      <param-value>jdbc:oracle:thin:@CDP03D:1521:UTOATEST</param-value>
+    </init-param>
+    <init-param>
+      <param-name>UserName</param-name>
+      <param-value>utoa</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Password</param-name>
+      <param-value>utoatest</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DVWebappServlet</servlet-name>
+    <url-pattern>*.dvw</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.htm</welcome-file>
+  </welcome-file-list>
+
+</web-app>

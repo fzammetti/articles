@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Example 1</title>
+<script>
+
+  var req;
+  var which;
+
+  function retrieveURL(url) {
+    if (window.XMLHttpRequest) { // Non-IE browsers
+      req = new XMLHttpRequest();
+      req.onreadystatechange = processStateChange;
+      try {
+        req.open("GET", url, true);
+      } catch (e) {
+        alert(e);
+      }
+      req.send(null);
+    } else if (window.ActiveXObject) { // IE
+      req = new ActiveXObject("Microsoft.XMLHTTP");
+      if (req) {
+        req.onreadystatechange = processStateChange;
+        req.open("GET", url, true);
+        req.send();
+      }
+    }
+  }
+
+  function processStateChange() {
+    if (req.readyState == 4) { // Complete
+      if (req.status == 200) { // OK response
+        document.getElementById("urlContent").innerHTML = req.responseText;
+      } else {
+        alert("Problem: " + req.statusText);
+      }
+    }
+  }
+
+</script>
+</head>
+<body>
+
+<h1>Example 1</h1>
+Simple URL retrieval and display.<hr>
+<p align="right"><a href="home.do">Return home</a></p><br>
+This example allows the user to enter a URL, which is then retrieved and
+displayed in a &lt;span&gt;.  This demonstrates that what is retrieved is NOT
+treated as an HTML document but rather a simple stream of data, hence the
+document is not parsed and page events don't fire, images don't get retrieved,
+etc.
+<br><br>
+<b>Note that you will get a security warning if the domain you are accessing
+is not the same as this example (which I assume it won't be).  In fact,
+some browsers will not allow this (Firefox), while others will with a
+warning (IE).</b>
+<br><br>
+<form>
+<input type="text" name="urlToRetrieve" size="50" value="http://www.omnytex.com">
+<input type="button" name="getURL" value="Get URL Contents" onClick="retrieveURL(urlToRetrieve.value);">
+</form>
+<br>
+<table border="1" bordercolor="#000000" cellpadding="5" cellspacing="0" width="100%">
+  <tr>
+    <td>
+      <span id="urlContent">Retrieved content will be displayed here</span>
+    </td>
+  </tr>
+</table>
+<br>
+
+</body>
+</html>
